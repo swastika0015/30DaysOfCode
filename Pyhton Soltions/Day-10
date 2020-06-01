@@ -1,0 +1,19 @@
+import math
+import os
+import random
+import re
+import sys
+
+if __name__ == '__main__':
+    n = int(raw_input())
+    b = bin(n)
+    c=1
+    stack=[]
+    for i in range(2,len(b)-1):
+        if b[i]=='1':
+            if b[i+1]=='1':
+                c+=1
+                stack.append(c)
+        else:
+            c=1
+    print(max(stack))
