@@ -1,0 +1,15 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+n=int(input())
+data={}
+for i in range(n):
+    d=input().split(" ")
+    data[d[0]]=d[1]
+while True:
+    try:
+        name=input()
+        if name in data:
+            print(name,"=",data[name],sep='')
+        else:
+            print("Not found")
+    except:
+        break
